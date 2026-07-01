@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#29b5e8"/>
+      <stop offset="100%" style="stop-color:#1a8bb0"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Itron Intelligence Agent - System Architecture</text>
+  <!-- User Layer -->
+  <rect x="480" y="60" width="240" height="50" rx="8" fill="url(#blueGrad)" stroke="#1a8bb0"/>
+  <text x="600" y="90" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Natural Language Query</text>
+  <!-- Arrow down -->
+  <path d="M600 110 L600 140" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+  <!-- Agent Layer -->
+  <rect x="100" y="145" width="1000" height="200" rx="12" fill="white" stroke="#29b5e8" stroke-width="2" opacity="0.95"/>
+  <text x="120" y="170" font-size="16" font-weight="bold" fill="#1e293b">Cortex Agent: ITRON_AGENT</text>
+  <!-- Orchestrator -->
+  <rect x="460" y="180" width="280" height="40" rx="6" fill="url(#blueGrad)"/>
+  <text x="600" y="205" text-anchor="middle" font-size="12" fill="white" font-weight="bold">LLM Orchestrator (auto model selection)</text>
+  <!-- Tools -->
+  <rect x="120" y="240" width="150" height="50" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195" y="260" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">Operations Analyst</text>
+  <text x="195" y="278" text-anchor="middle" font-size="9" fill="#3b82f6">text-to-SQL</text>
+  <rect x="290" y="240" width="150" height="50" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="365" y="260" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">ESG Analyst</text>
+  <text x="365" y="278" text-anchor="middle" font-size="9" fill="#3b82f6">text-to-SQL</text>
+  <rect x="460" y="240" width="150" height="50" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="535" y="260" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">ESG Search</text>
+  <text x="535" y="278" text-anchor="middle" font-size="9" fill="#22c55e">Cortex Search</text>
+  <rect x="630" y="240" width="150" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="705" y="260" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Ontology Validator</text>
+  <text x="705" y="278" text-anchor="middle" font-size="9" fill="#d97706">Deterministic Rules</text>
+  <rect x="800" y="240" width="140" height="50" rx="6" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text x="870" y="260" text-anchor="middle" font-size="10" fill="#5b21b6" font-weight="bold">ML Predictions</text>
+  <text x="870" y="278" text-anchor="middle" font-size="9" fill="#7c3aed">5 Models</text>
+  <rect x="960" y="240" width="120" height="50" rx="6" fill="#f0f9ff" stroke="#0ea5e9"/>
+  <text x="1020" y="260" text-anchor="middle" font-size="10" fill="#0c4a6e" font-weight="bold">Data to Chart</text>
+  <text x="1020" y="278" text-anchor="middle" font-size="9" fill="#0ea5e9">Visualization</text>
+  <!-- Arrows from orchestrator to tools -->
+  <path d="M460 220 L195 240" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M500 220 L365 240" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M560 220 L535 240" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M640 220 L705 240" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M700 220 L870 240" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M740 220 L1020 240" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Data Layer -->
+  <rect x="100" y="380" width="1000" height="220" rx="12" fill="white" stroke="#16a34a" stroke-width="2" opacity="0.95"/>
+  <text x="120" y="405" font-size="16" font-weight="bold" fill="#1e293b">ITRON_DB</text>
+  <!-- RAW Schema -->
+  <rect x="120" y="415" width="280" height="170" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="260" y="435" text-anchor="middle" font-size="12" font-weight="bold" fill="#475569">RAW Schema</text>
+  <text x="140" y="455" font-size="10" fill="#64748b">METERS (500 endpoints)</text>
+  <text x="140" y="472" font-size="10" fill="#64748b">METER_READINGS (55K+ intervals)</text>
+  <text x="140" y="489" font-size="10" fill="#64748b">SENSOR_EVENTS (100K IoT events)</text>
+  <text x="140" y="506" font-size="10" fill="#64748b">GRID_ASSETS (300 infrastructure)</text>
+  <text x="140" y="523" font-size="10" fill="#64748b">WORK_ORDERS (5,000 maintenance)</text>
+  <text x="140" y="540" font-size="10" fill="#64748b">OUTAGE_EVENTS (250 incidents)</text>
+  <text x="140" y="557" font-size="10" fill="#64748b">CUSTOMERS (500 accounts)</text>
+  <!-- ANALYTICS Schema -->
+  <rect x="420" y="415" width="300" height="170" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="570" y="435" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">ANALYTICS Schema</text>
+  <text x="440" y="455" font-size="10" fill="#64748b">ESG_ENVIRONMENTAL_METRICS</text>
+  <text x="440" y="472" font-size="10" fill="#64748b">ESG_SOCIAL_METRICS</text>
+  <text x="440" y="489" font-size="10" fill="#64748b">ESG_GOVERNANCE_METRICS</text>
+  <text x="440" y="506" font-size="10" fill="#64748b">SDG_PROGRESS</text>
+  <text x="440" y="523" font-size="10" fill="#64748b">CARBON_EMISSIONS (monthly detail)</text>
+  <text x="440" y="540" font-size="10" fill="#64748b">WATER_CONSERVATION</text>
+  <text x="440" y="557" font-size="10" fill="#64748b">ENERGY_EFFICIENCY</text>
+  <text x="440" y="574" font-size="10" fill="#64748b">ESG_DOCUMENTS (Cortex Search)</text>
+  <!-- ONTOLOGY Schema -->
+  <rect x="740" y="415" width="340" height="170" rx="8" fill="#fef9c3" stroke="#fbbf24"/>
+  <text x="910" y="435" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">ONTOLOGY Schema (ESGOnt)</text>
+  <text x="760" y="455" font-size="10" fill="#64748b">ONTOLOGY_CLASSES (37 OWL classes)</text>
+  <text x="760" y="472" font-size="10" fill="#64748b">ONTOLOGY_PROPERTIES (13 properties)</text>
+  <text x="760" y="489" font-size="10" fill="#64748b">ONTOLOGY_RELATIONSHIPS (32 links)</text>
+  <text x="760" y="506" font-size="10" fill="#64748b">ONTOLOGY_SDG_MAPPINGS (29 rules)</text>
+  <text x="760" y="523" font-size="10" fill="#64748b">ONTOLOGY_VALIDATION_RULES (18 constraints)</text>
+  <text x="760" y="540" font-size="10" fill="#64748b">ONTOLOGY_METRIC_DEFINITIONS (20 defs)</text>
+  <text x="760" y="562" font-size="11" fill="#92400e" font-weight="bold">Deterministic + Probabilistic</text>
+  <!-- ML Layer -->
+  <rect x="100" y="630" width="1000" height="100" rx="12" fill="white" stroke="#8b5cf6" stroke-width="2" opacity="0.95"/>
+  <text x="120" y="655" font-size="16" font-weight="bold" fill="#1e293b">ML Prediction Models</text>
+  <rect x="130" y="665" width="170" height="50" rx="6" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="215" y="685" text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="bold">Energy Demand</text>
+  <text x="215" y="700" text-anchor="middle" font-size="8" fill="#7c3aed">Time-series forecast</text>
+  <rect x="320" y="665" width="170" height="50" rx="6" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="405" y="685" text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="bold">Water Leak Detection</text>
+  <text x="405" y="700" text-anchor="middle" font-size="8" fill="#7c3aed">Pattern classification</text>
+  <rect x="510" y="665" width="170" height="50" rx="6" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="595" y="685" text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="bold">Equipment Failure</text>
+  <text x="595" y="700" text-anchor="middle" font-size="8" fill="#7c3aed">Survival analysis</text>
+  <rect x="700" y="665" width="170" height="50" rx="6" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="785" y="685" text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="bold">Carbon Forecast</text>
+  <text x="785" y="700" text-anchor="middle" font-size="8" fill="#7c3aed">SBTi pathway</text>
+  <rect x="890" y="665" width="170" height="50" rx="6" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="975" y="685" text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="bold">Anomaly Detection</text>
+  <text x="975" y="700" text-anchor="middle" font-size="8" fill="#7c3aed">Statistical / Isolation Forest</text>
+  <!-- Connector arrows -->
+  <path d="M195 290 L195 380" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4"/>
+  <path d="M365 290 L500 415" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4"/>
+  <path d="M705 290 L870 415" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4"/>
+  <path d="M870 290 L600 630" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4"/>
+  <!-- Legend -->
+  <rect x="100" y="755" width="1000" height="35" rx="6" fill="#f1f5f9"/>
+  <rect x="120" y="765" width="12" height="12" fill="#3b82f6"/>
+  <text x="138" y="775" font-size="10" fill="#475569">Cortex Analyst</text>
+  <rect x="240" y="765" width="12" height="12" fill="#22c55e"/>
+  <text x="258" y="775" font-size="10" fill="#475569">Cortex Search</text>
+  <rect x="360" y="765" width="12" height="12" fill="#f59e0b"/>
+  <text x="378" y="775" font-size="10" fill="#475569">Ontology (Deterministic)</text>
+  <rect x="530" y="765" width="12" height="12" fill="#8b5cf6"/>
+  <text x="548" y="775" font-size="10" fill="#475569">ML Models (Probabilistic)</text>
+  <rect x="700" y="765" width="12" height="12" fill="#0ea5e9"/>
+  <text x="718" y="775" font-size="10" fill="#475569">Visualization</text>
+</svg>

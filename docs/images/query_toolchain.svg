@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="Arial, sans-serif">
+  <rect width="1100" height="750" fill="#f8fafc"/>
+  <text x="550" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Query Tool Chain - Examples</text>
+  <text x="550" y="55" text-anchor="middle" font-size="11" fill="#64748b">Showing which tools are invoked and when the ontology is used</text>
+  <!-- Example 1 -->
+  <rect x="30" y="80" width="1040" height="180" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="50" y="105" font-size="13" font-weight="bold" fill="#1e293b">Example 1: "What were our Scope 1 emissions last quarter?"</text>
+  <!-- Flow -->
+  <rect x="50" y="120" width="160" height="40" rx="6" fill="#29b5e8" stroke="#1a8bb0"/>
+  <text x="130" y="145" text-anchor="middle" font-size="10" fill="white" font-weight="bold">User Query</text>
+  <path d="M210 140 L240 140" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+  <rect x="245" y="120" width="160" height="40" rx="6" fill="#3b82f6" stroke="#2563eb"/>
+  <text x="325" y="145" text-anchor="middle" font-size="10" fill="white" font-weight="bold">ESG Analyst (SQL)</text>
+  <path d="M405 140 L435 140" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="440" y="120" width="180" height="40" rx="6" fill="#f59e0b" stroke="#d97706"/>
+  <text x="530" y="140" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Ontology Validator</text>
+  <text x="530" y="154" text-anchor="middle" font-size="8" fill="#fef3c7">Confirms: ENVIRONMENTAL &gt; EMISSIONS</text>
+  <path d="M620 140 L650 140" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="655" y="120" width="140" height="40" rx="6" fill="#0ea5e9" stroke="#0284c7"/>
+  <text x="725" y="145" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Data to Chart</text>
+  <path d="M795 140 L825 140" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="830" y="120" width="220" height="40" rx="6" fill="#22c55e" stroke="#16a34a"/>
+  <text x="940" y="145" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Response with SDG 13 alignment</text>
+  <!-- Ontology details -->
+  <rect x="440" y="170" width="400" height="75" rx="4" fill="#fef9c3" stroke="#fbbf24" stroke-dasharray="3"/>
+  <text x="460" y="188" font-size="9" fill="#92400e" font-weight="bold">Ontology Output (Deterministic):</text>
+  <text x="460" y="203" font-size="9" fill="#78350f">Pillar: ENVIRONMENTAL | Category: EMISSIONS | Subcategory: CARBON_EMISSIONS</text>
+  <text x="460" y="218" font-size="9" fill="#78350f">Unit: tCO2e | Framework: GRI 305-1 | SDG: Goal 13 (Climate Action)</text>
+  <text x="460" y="233" font-size="9" fill="#78350f">Rule: Scope 1 = STATIONARY_COMBUSTION + MOBILE + FUGITIVE</text>
+  <!-- Example 2 -->
+  <rect x="30" y="280" width="1040" height="180" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="50" y="305" font-size="13" font-weight="bold" fill="#1e293b">Example 2: "Which water meters are likely leaking in the Northwest?"</text>
+  <rect x="50" y="320" width="160" height="40" rx="6" fill="#29b5e8" stroke="#1a8bb0"/>
+  <text x="130" y="345" text-anchor="middle" font-size="10" fill="white" font-weight="bold">User Query</text>
+  <path d="M210 340 L240 340" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="245" y="320" width="160" height="40" rx="6" fill="#8b5cf6" stroke="#7c3aed"/>
+  <text x="325" y="345" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Detect Anomalies</text>
+  <path d="M405 340 L435 340" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="440" y="320" width="180" height="40" rx="6" fill="#3b82f6" stroke="#2563eb"/>
+  <text x="530" y="340" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Operations Analyst</text>
+  <text x="530" y="354" text-anchor="middle" font-size="8" fill="#dbeafe">Get meter details + locations</text>
+  <path d="M620 340 L650 340" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="655" y="320" width="180" height="40" rx="6" fill="#f59e0b" stroke="#d97706"/>
+  <text x="745" y="340" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Ontology Validator</text>
+  <text x="745" y="354" text-anchor="middle" font-size="8" fill="#fef3c7">Maps to SDG 6: Clean Water</text>
+  <path d="M835 340 L865 340" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="870" y="320" width="180" height="40" rx="6" fill="#22c55e" stroke="#16a34a"/>
+  <text x="960" y="345" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Response + SDG 6</text>
+  <rect x="245" y="370" width="380" height="75" rx="4" fill="#ede9fe" stroke="#a78bfa" stroke-dasharray="3"/>
+  <text x="265" y="388" font-size="9" fill="#5b21b6" font-weight="bold">ML Model Output:</text>
+  <text x="265" y="403" font-size="9" fill="#4c1d95">Top 5 meters with leak probability &gt; 0.7</text>
+  <text x="265" y="418" font-size="9" fill="#4c1d95">MTR-000142: anomaly_ratio=3.2, risk=HIGH, night_flow elevated</text>
+  <text x="265" y="433" font-size="9" fill="#4c1d95">Recommended: Dispatch field crew for investigation</text>
+  <!-- Example 3 -->
+  <rect x="30" y="480" width="1040" height="180" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="50" y="505" font-size="13" font-weight="bold" fill="#1e293b">Example 3: "How does our workforce diversity compare to ESG benchmarks?"</text>
+  <rect x="50" y="520" width="160" height="40" rx="6" fill="#29b5e8" stroke="#1a8bb0"/>
+  <text x="130" y="545" text-anchor="middle" font-size="10" fill="white" font-weight="bold">User Query</text>
+  <path d="M210 540 L240 540" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="245" y="520" width="160" height="40" rx="6" fill="#3b82f6" stroke="#2563eb"/>
+  <text x="325" y="545" text-anchor="middle" font-size="10" fill="white" font-weight="bold">ESG Analyst (SQL)</text>
+  <path d="M405 540 L435 540" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="440" y="520" width="160" height="40" rx="6" fill="#22c55e" stroke="#16a34a"/>
+  <text x="520" y="545" text-anchor="middle" font-size="10" fill="white" font-weight="bold">ESG Search</text>
+  <path d="M600 540 L630 540" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="635" y="520" width="180" height="40" rx="6" fill="#f59e0b" stroke="#d97706"/>
+  <text x="725" y="540" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Ontology Validator</text>
+  <text x="725" y="554" text-anchor="middle" font-size="8" fill="#fef3c7">SOCIAL &gt; WORKFORCE &gt; D&amp;I</text>
+  <path d="M815 540 L845 540" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="850" y="520" width="200" height="40" rx="6" fill="#22c55e" stroke="#16a34a"/>
+  <text x="950" y="545" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Response + SDG 5 + SDG 8</text>
+  <rect x="440" y="570" width="400" height="75" rx="4" fill="#dcfce7" stroke="#86efac" stroke-dasharray="3"/>
+  <text x="460" y="588" font-size="9" fill="#166534" font-weight="bold">Combined Tool Output:</text>
+  <text x="460" y="603" font-size="9" fill="#14532d">SQL: Women in Leadership = 24% (target: 30%, benchmark: 25%)</text>
+  <text x="460" y="618" font-size="9" fill="#14532d">Search: DEI strategy doc - target 35% workforce, 30% leadership by 2027</text>
+  <text x="460" y="633" font-size="9" fill="#14532d">Ontology: SDG 5 (Gender Equality, target 5.5) + SDG 8 (Decent Work)</text>
+  <!-- Legend -->
+  <rect x="30" y="680" width="1040" height="55" rx="6" fill="#f1f5f9"/>
+  <text x="50" y="700" font-size="11" font-weight="bold" fill="#1e293b">Legend:</text>
+  <rect x="110" y="692" width="12" height="12" fill="#3b82f6"/>
+  <text x="128" y="702" font-size="9" fill="#475569">Cortex Analyst</text>
+  <rect x="220" y="692" width="12" height="12" fill="#22c55e"/>
+  <text x="238" y="702" font-size="9" fill="#475569">Cortex Search</text>
+  <rect x="330" y="692" width="12" height="12" fill="#f59e0b"/>
+  <text x="348" y="702" font-size="9" fill="#475569">Ontology Validator (Deterministic)</text>
+  <rect x="530" y="692" width="12" height="12" fill="#8b5cf6"/>
+  <text x="548" y="702" font-size="9" fill="#475569">ML Prediction</text>
+  <rect x="650" y="692" width="12" height="12" fill="#0ea5e9"/>
+  <text x="668" y="702" font-size="9" fill="#475569">Visualization</text>
+  <text x="50" y="722" font-size="10" fill="#64748b">The Ontology Validator is called in ALL ESG queries to ensure deterministic accuracy of classifications, units, and SDG mappings.</text>
+</svg>

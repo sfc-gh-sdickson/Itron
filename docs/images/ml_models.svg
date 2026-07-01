@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Arial, sans-serif">
+  <rect width="1000" height="600" fill="#f8fafc"/>
+  <text x="500" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">ML Model Pipeline</text>
+  <!-- Input Data -->
+  <rect x="50" y="70" width="180" height="200" rx="8" fill="#f0f9ff" stroke="#0ea5e9"/>
+  <text x="140" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#0c4a6e">Input Data</text>
+  <text x="70" y="120" font-size="10" fill="#475569">Meter Readings</text>
+  <text x="70" y="140" font-size="10" fill="#475569">Sensor Events</text>
+  <text x="70" y="160" font-size="10" fill="#475569">Asset Registry</text>
+  <text x="70" y="180" font-size="10" fill="#475569">Work Orders</text>
+  <text x="70" y="200" font-size="10" fill="#475569">Carbon Emissions</text>
+  <text x="70" y="220" font-size="10" fill="#475569">Weather Data</text>
+  <text x="70" y="240" font-size="10" fill="#475569">Maintenance History</text>
+  <!-- Models Column -->
+  <rect x="300" y="70" width="400" height="480" rx="8" fill="white" stroke="#e2e8f0"/>
+  <text x="500" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">ML Models (SQL UDFs)</text>
+  <!-- Model 1: Energy Demand -->
+  <rect x="320" y="110" width="360" height="70" rx="6" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="340" y="132" font-size="12" font-weight="bold" fill="#5b21b6">Energy Demand Forecasting</text>
+  <text x="340" y="150" font-size="9" fill="#6b7280">Algorithm: Seasonal decomposition + trend extrapolation</text>
+  <text x="340" y="166" font-size="9" fill="#6b7280">Features: Historical kWh, day-of-week, season, temperature</text>
+  <!-- Model 2: Water Leak -->
+  <rect x="320" y="190" width="360" height="70" rx="6" fill="#dcfce7" stroke="#86efac"/>
+  <text x="340" y="212" font-size="12" font-weight="bold" fill="#166534">Water Leak Detection</text>
+  <text x="340" y="230" font-size="9" fill="#6b7280">Algorithm: Statistical deviation + night flow analysis</text>
+  <text x="340" y="246" font-size="9" fill="#6b7280">Features: Flow patterns, pressure, CV, night-to-day ratio</text>
+  <!-- Model 3: Equipment -->
+  <rect x="320" y="270" width="360" height="70" rx="6" fill="#fef3c7" stroke="#fbbf24"/>
+  <text x="340" y="292" font-size="12" font-weight="bold" fill="#92400e">Equipment Failure Prediction</text>
+  <text x="340" y="310" font-size="9" fill="#6b7280">Algorithm: Weibull survival model (weighted factors)</text>
+  <text x="340" y="326" font-size="9" fill="#6b7280">Features: Age, condition, maintenance history, inspection gap</text>
+  <!-- Model 4: Carbon -->
+  <rect x="320" y="350" width="360" height="70" rx="6" fill="#fce7f3" stroke="#f9a8d4"/>
+  <text x="340" y="372" font-size="12" font-weight="bold" fill="#9d174d">Carbon Emissions Forecast</text>
+  <text x="340" y="390" font-size="9" fill="#6b7280">Algorithm: Linear trend + SBTi reduction pathway</text>
+  <text x="340" y="406" font-size="9" fill="#6b7280">Features: Historical emissions by scope, reduction rate</text>
+  <!-- Model 5: Anomaly -->
+  <rect x="320" y="430" width="360" height="70" rx="6" fill="#e0e7ff" stroke="#a5b4fc"/>
+  <text x="340" y="452" font-size="12" font-weight="bold" fill="#3730a3">Anomaly Detection</text>
+  <text x="340" y="470" font-size="9" fill="#6b7280">Algorithm: Z-score + rule-based classification</text>
+  <text x="340" y="486" font-size="9" fill="#6b7280">Features: Mean, stddev, tamper flags, quality metrics</text>
+  <!-- Output Column -->
+  <rect x="770" y="70" width="180" height="480" rx="8" fill="#f0fdf4" stroke="#22c55e"/>
+  <text x="860" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">Agent Outputs</text>
+  <text x="790" y="140" font-size="10" fill="#475569">Daily kWh forecast</text>
+  <text x="790" y="158" font-size="10" fill="#475569">Confidence intervals</text>
+  <line x1="680" y1="145" x2="770" y2="145" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arr)"/>
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs>
+  <text x="790" y="220" font-size="10" fill="#475569">Leak probability</text>
+  <text x="790" y="238" font-size="10" fill="#475569">Risk level + action</text>
+  <line x1="680" y1="225" x2="770" y2="225" stroke="#86efac" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="790" y="300" font-size="10" fill="#475569">Failure probability</text>
+  <text x="790" y="318" font-size="10" fill="#475569">Risk category</text>
+  <text x="790" y="336" font-size="10" fill="#475569">Recommended action</text>
+  <line x1="680" y1="305" x2="770" y2="305" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="790" y="385" font-size="10" fill="#475569">Quarterly tCO2e</text>
+  <text x="790" y="403" font-size="10" fill="#475569">On-track status</text>
+  <text x="790" y="421" font-size="10" fill="#475569">Reduction from baseline</text>
+  <line x1="680" y1="385" x2="770" y2="385" stroke="#f9a8d4" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="790" y="465" font-size="10" fill="#475569">Anomaly score</text>
+  <text x="790" y="483" font-size="10" fill="#475569">Anomaly type</text>
+  <text x="790" y="501" font-size="10" fill="#475569">Recommended action</text>
+  <line x1="680" y1="465" x2="770" y2="465" stroke="#a5b4fc" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Input arrows -->
+  <line x1="230" y1="170" x2="300" y2="145" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="230" y1="170" x2="300" y2="225" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="230" y1="170" x2="300" y2="305" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="230" y1="170" x2="300" y2="385" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="230" y1="170" x2="300" y2="465" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Bottom note -->
+  <text x="500" y="580" text-anchor="middle" font-size="11" fill="#475569">All models implemented as Snowflake SQL UDFs accessible via Cortex Agent generic tool type</text>
+</svg>
