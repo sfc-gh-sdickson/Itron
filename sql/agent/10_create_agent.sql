@@ -155,9 +155,15 @@ CREATE OR REPLACE AGENT ITRON_DB.ANALYTICS.ITRON_AGENT
   tool_resources:
     ItronOperationsAnalyst:
       semantic_view: "ITRON_DB.ANALYTICS.ITRON_OPERATIONS_SV"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "ITRON_WH"
 
     ItronESGAnalyst:
       semantic_view: "ITRON_DB.ANALYTICS.ITRON_ESG_SV"
+      execution_environment:
+        type: "warehouse"
+        warehouse: "ITRON_WH"
 
     ESGSearch:
       name: "ITRON_DB.ANALYTICS.ESG_SEARCH_SERVICE"
